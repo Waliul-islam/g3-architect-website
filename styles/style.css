@@ -173,6 +173,74 @@ main {
   font-weight: 600;
   color: white;
 }
+/* fact Styles */
+.facts-desc {
+  max-width: 34rem;
+  line-height: 1.6rem;
+}
+.fact-number {
+  font-size: 45px;
+  font-weight: 600;
+  margin: 15px;
+}
+.fact-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+.fact-card {
+  border: 1px solid #ff900e;
+  border-radius: 8px;
+  text-align: center;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fact-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  margin-top: 2.5rem;
+}
+/* sponsor styles */
+.sponsors {
+  text-align: center;
+}
+.sponsor-desc {
+  max-width: 34rem;
+  line-height: 1.6rem;
+  justify-self: center;
+}
+
+.sponsor-container img {
+  filter: grayscale(100%);
+}
+
+.sponsor-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* footer styles */
+footer {
+  background-color: rgba(255, 144, 14, 0.1);
+  max-width: 1400px;
+  margin: 5rem auto 0;
+}
+footer p {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.25rem;
+}
+
+/* Responsiveness Styles */
 
 @media screen and (max-width: 768px) {
   .navbar,
@@ -183,12 +251,16 @@ main {
   .nav-links {
     gap: 1rem;
   }
-  
+
   .speciality-section {
     flex-direction: column;
     align-items: center;
   }
-  .speciality-img img{
+  .speciality-card {
+    width: 90%;
+    justify-items: center;
+  }
+  .speciality-img img {
     width: 95%;
   }
   .experience {
@@ -208,6 +280,21 @@ main {
   .feature-description {
     margin-left: 1rem;
   }
+  .fact-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+  .sponsor-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .feature-seciton {
@@ -219,5 +306,20 @@ main {
   .speciality-section {
     flex-direction: column;
     align-items: center;
+  }
+  .fact-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+  .sponsor-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1.5rem;
   }
 }
