@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* shared styles */
-
+main > section{
+    margin-top: 120px;
+}
+main{
+    max-width: 1400px;
+    margin: 0 auto;
+}
 .work-sans-font {
   font-family: "Work Sans", serif;
   font-optical-sizing: auto;
@@ -29,9 +35,11 @@
 }
 /* navbar styles */
 .header {
-  max-width: 1400px;
-  margin: 0 auto;
   background-color: rgba(255, 144, 14, 0.1);
+}
+.navbar, .banner-section{
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .navbar{
     display: flex;
@@ -75,6 +83,45 @@
     width: 100%;
 }
 
+/* feature section styles */
+.feature-seciton{
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.feature-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.feature-description{
+    margin-left: 7rem;
+    max-width: 34rem;
+}
+.feature-title{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.quick-list{
+    font-weight: 600;
+}
+.feature{
+    color:#FF900E ;
+}
+.feature-desc{
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:768px){
     .navbar, .nav-links{
         flex-direction: column;
@@ -82,5 +129,24 @@
     }
     .nav-links{
         gap: 1rem;
+    }
+}
+@media screen and (max-width:576px){
+    .feature-seciton{
+        flex-direction: column;
+    }
+    .feature-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-description{
+        margin-left: 1rem;
+    }
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+    .feature-seciton{
+        flex-direction: column;
+    }
+    .feature-img-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
